@@ -160,7 +160,7 @@ Output: "SS(a)I(i) _ _"
 item = Item(name="i")
 station = Station(name="a", size=2)
 Events: [
-  ConveyorInitialized(belt=Belt(size=3, stations=[(0, station))])),
+  ConveyorInitialized(belt=Belt(size=4, stations=[(0, station))])),
   ItemAdded(item), ItemEnteredStation(item, station),
   ItemLeftStation(item, station),
   Stepped
