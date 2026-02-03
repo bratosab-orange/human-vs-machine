@@ -48,17 +48,20 @@ export function renderVisualization(state: ConveyorState): string {
  * renderStation : rend une station avec son contenu éventuel
  */
 function renderStation(station: StationState, itemAtPosition: string | null): string {
-  const stationChars = 'S'.repeat(station.size);
-  
   // Cas 1: Item dans la station
   if (station.itemInside) {
-    // L'item est à l'intérieur de la station
-    // On doit l'afficher au bon endroit selon la taille de la station
-    // Pour simplifier: on affiche toujours à la position 0 dans la notation
-    return `${stationChars}[I(${station.itemInside})](${station.name})`;
+    // L'item est toujours à la position 0 (entrée) de la station
+    // Format: 1 S avant le bracket, puis [I(item)], puis les S restants, puis (name)
+    // size=1: S[I(item)](name) - 1 S avant, 0 S après
+    // size=2: S[I(item)]S(name) - 1 S avant, 1 S après
+    // size=3: S[I(item)]SS(name) - 1 S avant, 2 S après
+    const sBefore = 'S';
+    const sAfter = 'S'.repeat(Math.max(0, station.size - 1));
+    return `${sBefore}[I(${station.itemInside})]${sAfter}(${station.name})`;
   }
   
   // Cas 2: Item collé (vient de sortir de la station)
+  const stationChars = 'S'.repeat(station.size);
   if (itemAtPosition) {
     return `${stationChars}(${station.name})I(${itemAtPosition})`;
   }

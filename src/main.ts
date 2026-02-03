@@ -144,7 +144,7 @@ const tests: TestCase[] = [
       },
       { type: 'Paused' }
     ],
-    expected: 'SS[I(i)](a) _ _'
+    expected: 'S[I(i)]S(a) _ _'
   },
   {
     title: 'Test 10: Item left station (sticky)',
