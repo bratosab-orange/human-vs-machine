@@ -38,29 +38,29 @@ Implémenter 2 fonctions bidirectionnelles :
 ## Phase 2: Events → Visualization
 
 ### Étape 2.1: Event Handlers (Projectors)
-- [ ] `handleConveyorInitialized` : créer l'état initial
-- [ ] `handleItemAdded` : placer l'item en position 0
-- [ ] `handleStepped` : décaler tous les items vers la droite
-- [ ] `handleItemEnteredStation` : retirer l'item du tapis, le mettre dans la station
-- [ ] `handleItemLeftStation` : remettre l'item sur le tapis (fin de station)
-- [ ] `handlePaused` : mettre `isPaused = true`
-- [ ] `handleResumed` : mettre `isPaused = false`
+- [x] `handleConveyorInitialized` : créer l'état initial
+- [x] `handleItemAdded` : placer l'item en position 0
+- [x] `handleStepped` : décaler tous les items vers la droite
+- [x] `handleItemEnteredStation` : retirer l'item du tapis, le mettre dans la station
+- [x] `handleItemLeftStation` : remettre l'item sur le tapis (fin de station)
+- [x] `handlePaused` : mettre `isPaused = true`
+- [x] `handleResumed` : mettre `isPaused = false`
 
 ### Étape 2.2: Projection (Reduce/Fold)
-- [ ] `applyEvent(state, event) → newState`
-- [ ] `projectState(events) → finalState` (reduce sur tous les events)
+- [x] `applyEvent(state, event) → newState`
+- [x] `projectState(events) → finalState` (reduce sur tous les events)
 
 ### Étape 2.3: Renderer
-- [ ] Rendu position vide : `_`
-- [ ] Rendu item seul : `I(name)`
-- [ ] Rendu station vide : `S(name)` ou `SSS(name)`
-- [ ] Rendu station avec item : `S[I(item)](station)`
-- [ ] Rendu item sorti de station (collé) : `S(s)I(i)`
-- [ ] Rendu queue de sortie : `: I(a) I(b)`
-- [ ] Assemblage final avec espaces
+- [x] Rendu position vide : `_`
+- [x] Rendu item seul : `I(name)`
+- [x] Rendu station vide : `S(name)` ou `SSS(name)`
+- [x] Rendu station avec item : `S[I(item)](station)`
+- [x] Rendu item sorti de station (collé) : `S(s)I(i)`
+- [x] Rendu queue de sortie : `: I(a) I(b)`
+- [x] Assemblage final avec espaces
 
 ### Étape 2.4: Fonction finale
-- [ ] `eventsToVisualization(events) → string`
+- [x] `eventsToVisualization(events) → string`
 
 ---
 

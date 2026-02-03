@@ -22,3 +22,10 @@ export type { StationState } from './state/conveyor.state';
 export type { ConveyorState } from './state/conveyor.state';
 export { createEmptyState } from './state/conveyor.state';
 
+// Projectors
+export { applyEvent } from './projectors/event-handlers';
+export { projectState } from './projectors/project-state';
+
+// Visualization
+export { eventsToVisualization } from './visualization/events-to-visualization';
+export { renderVisualization } from './visualization/renderer';
