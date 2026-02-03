@@ -1,6 +1,6 @@
 # kata.visualize-conveyer-belt
 
-Implement the following 2 functions:
+Implement the following 2 functions: 
 
 * `eventsToVisualization(List[Event]) -> Visualization`
 * `visualizationToEvents(Visualization) -> List[Event])`
