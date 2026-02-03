@@ -67,25 +67,25 @@ Implémenter 2 fonctions bidirectionnelles :
 ## Phase 3: Visualization → Events (Reverse)
 
 ### Étape 3.1: Parser la visualization
-- [ ] Parser `_` → position vide
-- [ ] Parser `I(x)` → item x
-- [ ] Parser `S(x)` → station x, size 1
-- [ ] Parser `SSS(x)` → station x, size 3
-- [ ] Parser `S[I(i)](x)` → station x avec item i dedans
-- [ ] Parser `S(x)I(i)` → station x, item i sorti (collé)
-- [ ] Parser `: I(a) I(b)` → queue de sortie
+- [x] Parser `_` → position vide
+- [x] Parser `I(x)` → item x
+- [x] Parser `S(x)` → station x, size 1
+- [x] Parser `SSS(x)` → station x, size 3
+- [x] Parser `S[I(i)](x)` → station x avec item i dedans
+- [x] Parser `S(x)I(i)` → station x, item i sorti (collé)
+- [x] Parser `: I(a) I(b)` → queue de sortie
 
 ### Étape 3.2: Reconstruire les événements
-- [ ] Générer `ConveyorInitialized` (belt + stations)
-- [ ] Identifier tous les items (tapis + stations + queue)
-- [ ] Ordonner par position (gauche à droite)
-- [ ] Générer `ItemAdded` + `Stepped` pour chaque item
-- [ ] Générer `ItemEnteredStation` + `Paused` pour items en station
-- [ ] Générer `ItemLeftStation` pour items sortis de station
-- [ ] Générer `Resumed` quand toutes les stations sont vides
+- [x] Générer `ConveyorInitialized` (belt + stations)
+- [x] Identifier tous les items (tapis + stations + queue)
+- [x] Ordonner par position (gauche à droite)
+- [x] Générer `ItemAdded` + `Stepped` pour chaque item
+- [x] Générer `ItemEnteredStation` + `Paused` pour items en station
+- [x] Générer `ItemLeftStation` pour items sortis de station
+- [x] Générer `Resumed` quand toutes les stations sont vides
 
 ### Étape 3.3: Fonction finale
-- [ ] `visualizationToEvents(viz) → Event[]`
+- [x] `visualizationToEvents(viz) → Event[]`
 
 ---
 

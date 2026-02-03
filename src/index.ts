@@ -29,3 +29,8 @@ export { projectState } from './projectors/project-state';
 // Visualization
 export { eventsToVisualization } from './visualization/events-to-visualization';
 export { renderVisualization } from './visualization/renderer';
+
+// Parser (reverse direction)
+export { visualizationToEvents } from './parser/visualization-to-events';
+export { parseVisualization } from './parser/visualization-parser';
+export type { Token, ParsedVisualization } from './parser/visualization-parser';
