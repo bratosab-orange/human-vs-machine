@@ -1,33 +1,6 @@
-// ===========================================
-// Phase 1.1 : Types de base
-// ===========================================
-
-/**
- * Item : un objet sur le tapis roulant
- */
-export interface Item {
-  name: string;
-}
-
-/**
- * Station : une zone de traitement sur le tapis
- */
-export interface Station {
-  name: string;
-  size: number;
-}
-
-/**
- * Belt : le tapis roulant avec sa longueur et ses stations
- */
-export interface Belt {
-  length: number;
-  stations: [number, Station][]; // [position, station]
-}
-
-// ===========================================
-// Phase 1.2 : Types d'événements
-// ===========================================
+import type { Belt } from '../models/belt.model';
+import type { Item } from '../models/item.model';
+import type { Station } from '../models/station.model';
 
 /**
  * ConveyorInitialized : initialise le tapis avec sa configuration

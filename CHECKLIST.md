@@ -16,22 +16,22 @@ Implémenter 2 fonctions bidirectionnelles :
 - [x] `Belt` : `{ length: number, stations: [position, Station][] }`
 
 ### Étape 1.2: Définir les types d'événements
-- [ ] `ConveyorInitialized` : `{ type, belt }`
-- [ ] `ItemAdded` : `{ type, item }`
-- [ ] `ItemEnteredStation` : `{ type, item, station }`
-- [ ] `ItemLeftStation` : `{ type, item, station }`
-- [ ] `Stepped` : `{ type }`
-- [ ] `Paused` : `{ type }`
-- [ ] `Resumed` : `{ type }`
-- [ ] `Event` : Union type de tous les événements
+- [x] `ConveyorInitialized` : `{ type, belt }`
+- [x] `ItemAdded` : `{ type, item }`
+- [x] `ItemEnteredStation` : `{ type, item, station }`
+- [x] `ItemLeftStation` : `{ type, item, station }`
+- [x] `Stepped` : `{ type }`
+- [x] `Paused` : `{ type }`
+- [x] `Resumed` : `{ type }`
+- [x] `Event` : Union type de tous les événements
 
 ### Étape 1.3: Définir l'état (Aggregate)
-- [ ] `ConveyorState` avec :
-  - [ ] `length` : taille du tapis
-  - [ ] `positions` : tableau des items sur le tapis `(string | null)[]`
-  - [ ] `stations` : Map position → station (avec `itemInside`)
-  - [ ] `exitQueue` : items sortis du tapis
-  - [ ] `isPaused` : flag pause
+- [x] `ConveyorState` avec :
+  - [x] `length` : taille du tapis
+  - [x] `positions` : tableau des items sur le tapis `(string | null)[]`
+  - [x] `stations` : Map position → station (avec `itemInside`)
+  - [x] `exitQueue` : items sortis du tapis
+  - [x] `isPaused` : flag pause
 
 ---
 
