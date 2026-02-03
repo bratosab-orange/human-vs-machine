@@ -28,13 +28,18 @@ export function renderVisualization(state: ConveyorState): string {
     }
   }
   
+  // Construire la représentation du tapis
+  let result = parts.join(' ');
+
   // Ajouter la queue de sortie si elle n'est pas vide
   if (state.exitQueue.length > 0) {
-    const exitPart = ':' + state.exitQueue.map(item => ` I(${item})`).join('');
-    parts.push(exitPart);
+    // Les items sont affichés dans l'ordre inverse (dernier sorti en premier)
+    const reversedQueue = [...state.exitQueue].reverse();
+    const exitPart = ':' + reversedQueue.map(item => ` I(${item})`).join('');
+    result += exitPart;
   }
   
-  return parts.join(' ');
+  return result;
 }
 
 
