@@ -291,5 +291,39 @@ describe('eventsToVisualization - KATA Examples', () => {
       ];
       expect(eventsToVisualization(events)).toBe('_ S(s1) SS(s2): I(i2) I(i1)');
     });
+
+    it('should handle complete KATA example with both items exiting', () => {
+      const station1 = { name: 's1', size: 1 };
+      const station2 = { name: 's2', size: 2 };
+      const belt = { length: 4, stations: [[1, station1], [2, station2]] as [number, typeof station1][] };
+      const item1 = { name: 'i1' };
+      const item2 = { name: 'i2' };
+
+      const events: Event[] = [
+        { type: 'ConveyorInitialized', belt },
+        { type: 'ItemAdded', item: item1 },
+        { type: 'Stepped' },
+        { type: 'ItemEnteredStation', item: item1, station: station1 },
+        { type: 'Paused' },
+        { type: 'ItemAdded', item: item2 },
+        { type: 'ItemLeftStation', item: item1, station: station1 },
+        { type: 'Resumed' },
+        { type: 'Stepped' },
+        { type: 'ItemEnteredStation', item: item2, station: station1 },
+        { type: 'ItemEnteredStation', item: item1, station: station2 },
+        { type: 'Paused' },
+        { type: 'ItemLeftStation', item: item2, station: station1 },
+        { type: 'ItemLeftStation', item: item1, station: station2 },
+        { type: 'Resumed' },
+        { type: 'Stepped' },
+        { type: 'ItemEnteredStation', item: item2, station: station2 },
+        { type: 'Paused' },
+        { type: 'ItemLeftStation', item: item2, station: station2 },
+        { type: 'Resumed' },
+        { type: 'Stepped' },
+      ];
+
+      expect(eventsToVisualization(events)).toBe('_ S(s1) SS(s2): I(i2) I(i1)');
+    });
   });
 });

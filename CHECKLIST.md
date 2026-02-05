@@ -92,28 +92,28 @@ Implémenter 2 fonctions bidirectionnelles :
 ## Phase 4: Interface Utilisateur
 
 ### Étape 4.1: Structure HTML
-- [ ] Zone d'affichage de la visualization actuelle
-- [ ] Zone d'affichage des événements (historique)
-- [ ] Zone de configuration initiale du belt
+- [x] Zone d'affichage de la visualization actuelle
+- [x] Zone d'affichage des événements (historique)
+- [x] Zone de configuration initiale du belt
 
 ### Étape 4.2: Contrôles interactifs
-- [ ] Bouton "Initialize" : configurer le tapis (longueur, stations)
-- [ ] Bouton "Add Item" : ajouter un item (avec input pour le nom)
-- [ ] Bouton "Step" : avancer le tapis d'une position
-- [ ] Bouton "Enter Station" : faire entrer un item dans une station
-- [ ] Bouton "Leave Station" : faire sortir un item d'une station
-- [ ] Bouton "Reset" : réinitialiser l'état
+- [x] Bouton "Initialize" : configurer le tapis (longueur, stations)
+- [x] Bouton "Add Item" : ajouter un item (avec input pour le nom)
+- [x] Bouton "Step" : avancer le tapis d'une position
+- [x] Auto "Enter Station" : détection automatique quand item atteint une station
+- [x] Auto "Leave Station" : sortie automatique après 2 secondes de traitement
+- [x] Bouton "Reset" : réinitialiser l'état
 
 ### Étape 4.3: Affichage en temps réel
-- [ ] Afficher la visualization après chaque action
-- [ ] Afficher la liste des événements émis
-- [ ] Mettre en évidence l'état Paused/Resumed
-- [ ] Animation simple lors du stepping (optionnel)
+- [x] Afficher la visualization après chaque action
+- [x] Afficher la liste des événements émis
+- [x] Mettre en évidence l'état Paused/Resumed
+- [x] Animation simple lors du stepping (auto-processing avec délai)
 
 ### Étape 4.4: Mode reverse
-- [ ] Input pour saisir une visualization
-- [ ] Bouton "Parse" : convertir la visualization en événements
-- [ ] Afficher les événements reconstruits
+- [x] Input pour saisir une visualization
+- [x] Bouton "Parse" : convertir la visualization en événements
+- [x] Afficher les événements reconstruits
 
 ---
 
